@@ -25,7 +25,7 @@ public class GameConsole {
 			isCorrect = game.guess(ans);
 			System.out.print(game.getHint());
 		}while(isCorrect==false);
-		System.out.printf(" You used %d guesses",game.getCount());
+		System.out.printf(" You used %d guesses.",game.getCount());
 		return ans;
 	}
 }
