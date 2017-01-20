@@ -20,14 +20,14 @@ public class GuessingGame {
 		counter = 0;
 	}
 	/**
-	 * Set a upper bound
+	 * Set an upper bound
 	 * @param upperBound is the maximum number that will be random
 	 */
 	private void setUpperBound(int upperBound){
 		this.upperBound = upperBound;
 	}
 	/**
-	 * Get a upper bound
+	 * Return an upper bound
 	 * @return upper bound is the random upper limit.
 	 */
 	public int getUpperBound(){
@@ -58,7 +58,7 @@ public class GuessingGame {
 	public boolean guess(int number){
 		counter += 1;
 		if(number == secret){
-			setHint("Correct. The secret is "+secret+"."+" You used "+counter+" guesses.");
+			setHint("Correct. The secret is "+secret+"."+" You used "+getCount()+" guesses.");
 			return true;
 		}else{
 			if(number < secret){
@@ -85,7 +85,7 @@ public class GuessingGame {
 	}
 	/**
 	 * Return how many guesses user used
-	 * @return counter
+	 * @return counter is number of times user guesses the answer.
 	 */
 	public int getCount(){
 		return counter;
