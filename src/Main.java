@@ -1,5 +1,5 @@
 /**
- * 
+ * The main class of the game
  * @author Nitith Chayakul
  *
  */
