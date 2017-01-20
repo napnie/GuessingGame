@@ -10,8 +10,8 @@ public class GuessingGame {
 	private int counter;
 	
 	/**
-	 * Construct a object
-	 * @param upperBound
+	 * Initialize a new game.
+	 * @param upperBound is the random upper limit.
 	 */
 	GuessingGame(int upperBound){
 		this.upperBound = upperBound;
@@ -28,21 +28,21 @@ public class GuessingGame {
 	}
 	/**
 	 * Get a upper bound
-	 * @return upper bound
+	 * @return upper bound is the random upper limit.
 	 */
 	public int getUpperBound(){
 		return upperBound;
 	}
 	/**
 	 * Get a secret
-	 * @return a secret number
+	 * @return a secret number.
 	 */
 	private int getSecret(){
 		return secret;
 	}
 	/**
 	 * Create a random number between 1 and limit.
-	 * @param limit is the upper limit for random number
+	 * @param limit is the upper limit for random number.
 	 * @return a random number between 1 and limit .
 	 */
 	private int getRandomNumber(int limit){
