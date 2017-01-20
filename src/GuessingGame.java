@@ -19,27 +19,31 @@ public class GuessingGame {
 		secret = getRandomNumber(this.upperBound);
 		counter = 0;
 	}
+	
 	/**
-	 * Set an upper bound
+	 * Set an upper bound.
 	 * @param upperBound is the maximum number that will be random
 	 */
 	private void setUpperBound(int upperBound){
 		this.upperBound = upperBound;
 	}
+	
 	/**
-	 * Return an upper bound
+	 * Return an upper bound.
 	 * @return upper bound is the random upper limit.
 	 */
 	public int getUpperBound(){
 		return upperBound;
 	}
+	
 	/**
-	 * Get a secret
+	 * Get a secret.
 	 * @return a secret number.
 	 */
 	private int getSecret(){
 		return secret;
 	}
+	
 	/**
 	 * Create a random number between 1 and limit.
 	 * @param limit is the upper limit for random number.
@@ -50,8 +54,9 @@ public class GuessingGame {
 		Random rand = new Random(seed);
 		return rand.nextInt(limit) +1;
 	}
+	
 	/**
-	 * Check the answer
+	 * Check the answer.
 	 * @param number is the number a user guess
 	 * @return a boolean that tell us whether or not the answer is correct.
 	 */
@@ -69,6 +74,7 @@ public class GuessingGame {
 			return false;
 		}
 	}
+	
 	/**
 	 * Return a hint based on the most recent guess.
 	 * @return hint based on most recent guess
@@ -76,15 +82,17 @@ public class GuessingGame {
 	public String getHint(){
 		return hint;
 	}
+	
 	/**
-	 * Set hint to a certain sentence
+	 * Set hint to a certain sentence.
 	 * @param hint is a sentence that you want to set as hint
 	 */
 	private void setHint(String hint){
 		this.hint = hint;
 	}
+	
 	/**
-	 * Return how many guesses user used
+	 * Return how many guesses user used.
 	 * @return counter is number of times user guesses the answer.
 	 */
 	public int getCount(){

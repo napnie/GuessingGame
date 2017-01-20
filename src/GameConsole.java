@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
- * The ui class of the game
+ * The ui class of the game.
  * @author Nitith Chayakul
  *
  */
