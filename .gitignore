@@ -1,2 +1,5 @@
 /bin
+/.setting
 *.class
+.classpath
+.project
