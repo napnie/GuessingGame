@@ -87,7 +87,7 @@ public class GuessingGame {
 	 * Set hint to a certain sentence.
 	 * @param hint is a sentence that you want to set as hint
 	 */
-	private void setHint(String hint){
+	protected void setHint(String hint){
 		this.hint = hint;
 	}
 	
