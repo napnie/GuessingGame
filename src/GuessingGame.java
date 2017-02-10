@@ -1,4 +1,5 @@
 import java.util.Random;
+
 /**
  * Game of guessing a secret number.
  * @author Nitith Chayakul
@@ -13,7 +14,7 @@ public class GuessingGame {
 	 * Initialize a new game.
 	 * @param upperBound is the random upper limit.
 	 */
-	GuessingGame(int upperBound){
+	GuessingGame(int upperBound) {
 		this.upperBound = upperBound;
 		
 		secret = getRandomNumber(this.upperBound);
@@ -24,7 +25,7 @@ public class GuessingGame {
 	 * Set an upper bound.
 	 * @param upperBound is the maximum number that will be random
 	 */
-	private void setUpperBound(int upperBound){
+	private void setUpperBound(int upperBound) {
 		this.upperBound = upperBound;
 	}
 	
@@ -32,7 +33,7 @@ public class GuessingGame {
 	 * Return an upper bound.
 	 * @return upper bound is the random upper limit.
 	 */
-	public int getUpperBound(){
+	public int getUpperBound() {
 		return upperBound;
 	}
 	
@@ -40,7 +41,7 @@ public class GuessingGame {
 	 * Get a secret.
 	 * @return a secret number.
 	 */
-	private int getSecret(){
+	private int getSecret() {
 		return secret;
 	}
 	
@@ -49,7 +50,7 @@ public class GuessingGame {
 	 * @param limit is the upper limit for random number.
 	 * @return a random number between 1 and limit .
 	 */
-	private int getRandomNumber(int limit){
+	private int getRandomNumber(int limit) {
 		long seed = System.currentTimeMillis();
 		Random rand = new Random(seed);
 		return rand.nextInt(limit) +1;
@@ -60,15 +61,15 @@ public class GuessingGame {
 	 * @param number is the number a user guess
 	 * @return a boolean that tell us whether or not the answer is correct.
 	 */
-	public boolean guess(int number){
+	public boolean guess(int number) {
 		counter += 1;
-		if(number == secret){
+		if(number == secret) {
 			setHint("Correct. The secret is "+secret+"."+" You used "+getCount()+" guesses.");
 			return true;
-		}else{
-			if(number < secret){
+		} else {
+			if (number < secret) {
 				setHint("Sorry, your guess is too small.");
-			}else if(number > secret){
+			} else if(number > secret) {
 				setHint("Sorry, your guess is too big.");
 			}
 			return false;
@@ -79,7 +80,7 @@ public class GuessingGame {
 	 * Return a hint based on the most recent guess.
 	 * @return hint based on most recent guess
 	 */
-	public String getHint(){
+	public String getHint() {
 		return hint;
 	}
 	
@@ -87,7 +88,7 @@ public class GuessingGame {
 	 * Set hint to a certain sentence.
 	 * @param hint is a sentence that you want to set as hint
 	 */
-	protected void setHint(String hint){
+	protected void setHint(String hint) {
 		this.hint = hint;
 	}
 	
@@ -95,7 +96,7 @@ public class GuessingGame {
 	 * Return how many guesses user used.
 	 * @return counter is number of times user guesses the answer.
 	 */
-	public int getCount(){
+	public int getCount() {
 		return counter;
 	}
 }
